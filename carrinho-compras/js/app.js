@@ -11,7 +11,7 @@ function adicionar() {
     let produtosParaVenda = document.getElementById('produto').value;
     let valorDeProduto = produtosParaVenda.split('R$');
     let produtoEmSi = produtosParaVenda.split('-');
-    let quantidadeDeProdutos = (document.getElementById('quantidade').value);
+    let quantidadeDeProdutos = document.getElementById('quantidade').value;
     let valorDaSoma = quantidadeDeProdutos * valorDeProduto[1];
 valorDaSomaTotal = valorDaSomaTotal + valorDaSoma;
 valorDaCompra.textContent = `R$${valorDaSomaTotal}`;
@@ -27,7 +27,7 @@ if (produtoExibido.length > 0) {
     noCarinho.unshift(produtoExibido);
 }
 listaDeProdutos.innerHTML = noCarinho.join('</section>');
-(document.getElementById('quantidade').value) = 1;
+document.getElementById('quantidade').value = 1;
 }
 
 function limpar() {
